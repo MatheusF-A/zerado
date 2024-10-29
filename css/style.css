@@ -1,0 +1,116 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+.fundo{
+    background-image: url("../img/fundo.png");
+    position: fixed;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.container{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px;
+    border-radius: 10px;
+}
+
+
+/* Menu */
+
+.menu ul{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    list-style: none;
+    background-color: black;
+    color: white;
+}
+
+.menu ul li{
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    margin: auto 20px auto 20px;
+}
+
+.menu ul li:hover{
+    background-color: white;
+    color: black;
+    transition: 0.2s;
+}
+
+
+
+/* ------------ */
+
+/*Form*/ 
+
+input[type="text"], [type="file"]{
+    width: 300px;
+}
+
+textarea{
+    width: 301px;
+    min-width: 301px;
+    max-width: 301px;
+    field-sizing: content;
+    max-height: 200px;
+    min-height: 19px;
+}
+
+.form label{
+    display: block;
+    margin: 0 0 10px;
+}
+
+/* ------------ */
+
+/* Botões */
+
+.btnSalvar{
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: lightgreen;
+    border: 1px solid;
+    width: 100px;   
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.btnSalvar:hover{
+    color: white;
+    background-color: green;
+    border-color: black;
+}
+
+.btnLimpar{
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: bold;
+    background-color: lightgrey;
+    border: 1px solid;
+    width: 100px;   
+    transition: 0.2s;
+    box-sizing: border-box;
+    float: right;
+}
+
+.btnLimpar:hover{
+    color: white;
+    background-color: grey;
+    border-color: black
+}
+
