@@ -36,6 +36,7 @@
     list-style: none;
     background-color: black;
     color: white;
+    
 }
 
 .menu ul li{
@@ -68,7 +69,7 @@ textarea{
     min-width: 301px;
     max-width: 301px;
     field-sizing: content;
-    max-height: 200px;
+    max-height: 150px;
     min-height: 19px;
 }
 
