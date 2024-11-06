@@ -21,24 +21,31 @@
             while ($jogo = $query->fetch(PDO::FETCH_ASSOC)) {        
             ?>
             
-            <div class="game-card">
-                <div class="game-image">
-                    <img src="./upload/<?= $jogo['capa'];?>" alt="Imagem do jogo">
+            <div class="jogo">
+                <div class="game-card">
+                    <div class="game-image">
+                        <img src="./upload/<?= $jogo['capa'];?>" alt="Imagem do jogo">
+                    </div>
+
+                    <div class="game-info">
+                        <h2><?=($jogo['nome']); ?></h2>
+                        <p><strong>Plataforma:</strong> <?=($jogo['plataforma']); ?></p>
+                        <p><strong>Zerado em: </strong>
+                        <?php 
+                            $data_original = $jogo['data'];
+
+                            $data = DateTime::createFromFormat('Y-m-d', $data_original);
+                            $data_formatada = $data->format('d/m/Y');
+                            echo $data_formatada;
+                        ?></p>
+                        <p><strong>Descrição:</strong></p>
+                        <p class="description"><?=($jogo['descricao']); ?></p>
+                    </div>
                 </div>
-
-                <div class="game-info">
-                    <h2><?=($jogo['nome']); ?></h2>
-                    <p><strong>Plataforma:</strong> <?=($jogo['plataforma']); ?></p>
-                    <p><strong>Zerado em: </strong>
-                    <?php 
-                        $data_original = $jogo['data'];
-
-                        $data = DateTime::createFromFormat('Y-m-d', $data_original);
-                        $data_formatada = $data->format('d/m/Y');
-                        echo $data_formatada;
-                    ?></p>
-                    <p><strong>Descrição:</strong></p>
-                    <p class="description"><?=($jogo['descricao']); ?></p>
+            
+                <div class="botoes">
+                    <a href="./editar.php?id=<?=$jogo['idJogo'];?>" class="btnEditar">Editar</a>
+                    <a href="./excluir.php?id=<?=$jogo['idJogo'];?>"class="btnExcluirView">Excluir</a>
                 </div>
             </div>
 
