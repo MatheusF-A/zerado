@@ -9,7 +9,7 @@ if (isset($_GET['id']) && filter_var($_GET['id'], FILTER_VALIDATE_INT)) {
 }
 
 try {
-    // Utiliza uma consulta preparada para evitar injeção de SQL
+    
     $sql = "SELECT * FROM jogoszerados WHERE idJogo = :id";
     $stmt = $conexao->prepare($sql);
     $stmt->execute([':id' => $id]);
@@ -25,4 +25,3 @@ try {
     echo "Erro ao se conectar com o banco. " . $e->getMessage();
     exit();
 }
-
